@@ -1,3 +1,5 @@
+@import "../index.scss";
+
 pre {
   display: block;
   font-size: 14px;
@@ -11,6 +13,11 @@ pre {
 h1,h2,h3,h4,h5,h6{
   margin-top: 1em;
 }
+
+code{
+  font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace !important;
+}
+
 strong {
   font-weight: bold;
 }
@@ -48,6 +55,7 @@ h1{
   color: #000000;
   margin:0;
   padding:0;
+  color:$FontColor;
 }
 
 #content .desc ul,#content .desc ol {

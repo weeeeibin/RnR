@@ -130,6 +130,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/highlight.js@^9.12.4":
+  version "9.12.4"
+  resolved "https://registry.npm.taobao.org/@types/highlight.js/download/@types/highlight.js-9.12.4.tgz#8c3496bd1b50cc04aeefd691140aa571d4dbfa34"
+  integrity sha1-jDSWvRtQzASu79aRFAqlcdTb+jQ=
+
 "@types/history@*":
   version "4.7.8"
   resolved "https://registry.npm.taobao.org/@types/history/download/@types/history-4.7.8.tgz?cache=0&sync_timestamp=1600298323056&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fhistory%2Fdownload%2F%40types%2Fhistory-4.7.8.tgz#49348387983075705fe8f4e02fb67f7daaec4934"
@@ -2503,11 +2508,6 @@ highlight.js@^10.2.1:
   version "10.2.1"
   resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.2.1.tgz?cache=0&sync_timestamp=1601591071942&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhighlight.js%2Fdownload%2Fhighlight.js-10.2.1.tgz#09784fe2e95612abbefd510948945d4fe6fa9668"
   integrity sha1-CXhP4ulWEqu+/VEJSJRdT+b6lmg=
-
-highlight@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.npm.taobao.org/highlight/download/highlight-0.2.4.tgz#8ac02875b03f5935e0675852b76cfe1fd58e0dff"
-  integrity sha1-isAodbA/WTXgZ1hSt2z+H9WODf8=
 
 history@^4.9.0:
   version "4.10.1"

@@ -35,7 +35,7 @@ function HideOnScroll(props: BarProps) {
 
 function MarkdownContent(props: RouteComponentProps<Props>): ReactElement {
 
-  const [theme, setTheme] = useState({ AppBar: "#2e2e2e", Background: "#fff", color: "#000" })
+  const [theme, setTheme] = useState("light");
   const [loading, setLoading] = useState(true);
   const [content, setcontent] = useState(null);
   const [title, settitle] = useState("加载中...");
@@ -49,30 +49,34 @@ function MarkdownContent(props: RouteComponentProps<Props>): ReactElement {
   }, [])
 
   function themeButton() {
-    if (theme.Background === "#fff") {
-      setTheme({ AppBar: "#2e2e2e", Background: "#191919", color: "#fff" })
+    if (theme === "light") {
+      document.getElementsByTagName('body')[0].style.setProperty('--Background', '#191919');
+      document.getElementsByTagName('body')[0].style.setProperty('--FontColor', '#fff');
+      setTheme("dark");
     }
     else {
-      setTheme({ AppBar: "#2e2e2e", Background: "#fff", color: "#000" })
+      document.getElementsByTagName('body')[0].style.setProperty('--Background', '#fff');
+      document.getElementsByTagName('body')[0].style.setProperty('--FontColor', '#000');
+      setTheme("light");
     }
   }
 
   return (
     <div>
       <HideOnScroll {...props}>
-        <AppBar style={{ backgroundColor: theme.AppBar }}>
+        <AppBar className="AppBar-Background">
           <Toolbar>
             <div className="AppBar">
               <Typography variant="h6">{title}</Typography>
               <IconButton edge="start" className="ThemeButton" onClick={themeButton}>
-                {theme.Background === "#fff" && <NightsStay />}
-                {theme.Background !== "#fff" && <WbSunny />}
+                {theme === "light" && <NightsStay />}
+                {theme === "dark" && <WbSunny />}
               </IconButton>
             </div>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-      <div className='markdown-content' style={{ backgroundColor: theme.Background }}>
+      <div className='markdown-content'>
         {loading &&
           <div>
             <Skeleton style={{ width: "30vw", height: "60px" }} animation="wave" />
@@ -91,7 +95,7 @@ function MarkdownContent(props: RouteComponentProps<Props>): ReactElement {
         }
         {!loading &&
           <div style={{ color: "#fff" }}>
-            <MarkDownView content={content} color={theme.color} />
+            <MarkDownView content={content}/>
             <div className="footer">页面由mrmd.xyz提供</div>
           </div>}
       </div>

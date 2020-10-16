@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // production development
+  mode: 'production', // production development
   entry: {
     app: './src/App.tsx'
   },
@@ -19,7 +19,7 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(s[ac]ss|css)$/i,
+        test: /\.scss?$/,
         use: [{
           loader: "style-loader"
         }, {
@@ -32,6 +32,14 @@ module.exports = {
           }
         }, {
           loader: "sass-loader"
+        }]
+      },
+      {
+        test: /\.css?$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: 'css-loader',
         }]
       },
       {

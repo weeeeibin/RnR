@@ -1,10 +1,14 @@
 
+$Background:var(--Background,#fff);
+$FontColor:var(--FontColor,#000);
+
 .markdown-content{
   padding-left: 7vw;
   padding-right: 7vw;
   padding-top: 64px;
   min-height: 100vh;
   box-sizing: border-box;
+  background-color: $Background;
 }
 
 @media (min-width: 0px) and (orientation: landscape){
@@ -17,6 +21,10 @@
   .markdown-content{
     padding-top: 64px;
   }
+}
+
+.AppBar-Background{
+  background-color: #2e2e2e !important;
 }
 
 .AppBar{
