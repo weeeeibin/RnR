@@ -1,0 +1,44 @@
+
+.markdown-content{
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 64px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (min-width: 0px) and (orientation: landscape){
+  .markdown-content{
+    padding-top: 48px;
+  }
+}
+
+@media (min-width: 600px){
+  .markdown-content{
+    padding-top: 64px;
+  }
+}
+
+.AppBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  svg{
+    cursor: pointer;
+  }
+}
+
+.ThemeButton{
+  color:#fff !important;
+}
+
+.footer{
+  padding:1rem 0;
+  width: 100%;
+  text-align: right;
+  overflow: hidden;
+  color:#bfbfbf;
+  font-size: .5rem;
+}

@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
 
 
 interface Props {
-  json: any
+  json: any;
 }
 
 const card = (props: Props) => {
@@ -53,7 +53,7 @@ const card = (props: Props) => {
   const [share, setShare] = React.useState<boolean>(false);
 
   return (
-    <Card className={classes.card} onClick={() => { window.open("/view?id=" + 123); }}>
+    <Card className={classes.card} onClick={() => { window.open("#/MarkdownContent/" + props.json.id); }}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" src={props.json.userInfo.imgUrl} className={classes.avatar}>
@@ -78,7 +78,7 @@ const card = (props: Props) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing style={{ marginTop: "1rem" }}>
-        <CopyToClipboard text={window.location.href + "view?id=" + 123} onCopy={(e) => { setShare(true);enqueueSnackbar('文章链接已复制到剪切板！',{variant:"success",anchorOrigin:{vertical:"top",horizontal:"right"}}) }}>
+        <CopyToClipboard text={window.location.href + "MarkdownContent/" + props.json.id} onCopy={(e) => { setShare(true);enqueueSnackbar('文章链接已复制到剪切板！',{variant:"success",anchorOrigin:{vertical:"top",horizontal:"right"}}) }}>
           <IconButton onClick={(e) => {
             e.stopPropagation();
           }} >

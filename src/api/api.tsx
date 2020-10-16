@@ -29,8 +29,20 @@ const Search = async(key:string) => {
   }
 }
 
+const GetFieldByID = async(id:string) => {
+  let res = await axios({
+    url:"/api/content/getFieldByID",
+    method:"POST",
+    data:{id:id}
+  });
+  if(res.data.code === 200){
+    return(res.data);
+  }
+}
+
 export {
   GetMarkdown,
   Favorite,
-  Search
+  Search,
+  GetFieldByID
 }
