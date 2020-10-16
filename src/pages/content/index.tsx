@@ -12,7 +12,6 @@ import WbSunny from '@material-ui/icons/WbSunny';
 import Skeleton from '@material-ui/lab/Skeleton/Skeleton';
 import { GetFieldByID } from '../../api/api';
 import MarkDownView from './markdown/markdown';
-import { colors } from '@material-ui/core';
 
 interface Props {
   id: string;

@@ -1,7 +1,7 @@
 import { any } from 'prop-types';
 import React, { lazy, Suspense } from 'react';
 import * as ReactDOM from 'react-dom';
-import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 const Index = lazy(() => import('./pages/Index'));

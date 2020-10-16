@@ -1,4 +1,4 @@
-import React, { Component, ReactElement, useEffect, useState } from 'react';
+import React, {  ReactElement, useEffect } from 'react';
 import marked from 'marked';
 import "./markdown.scss";
 import hljs from 'highlight.js';
@@ -23,10 +23,11 @@ export default function MarkDownView(props: Props): ReactElement {
       renderer: new marked.Renderer(),
       gfm: true,
       breaks: true,
-      pedantic: false,
+      pedantic: true,
       sanitize: false,
       smartLists: true,
       smartypants: false,
+      xhtml:true
     });
   }, []);
 
