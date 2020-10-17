@@ -100,9 +100,10 @@ class Index extends Component<Props, State> {
     }
     this.loadPage();
     let scroll = null;
+    let windowHeight = window.innerHeight;
     window.addEventListener('scroll', e => {
-      scroll = document.documentElement;
-      if (scroll.scrollTop >= (scroll.scrollHeight - scroll.clientHeight) - scroll.scrollHeight / 4 && !this.state.loading && !this.state.end) {
+      scroll = document.body;
+      if ((scroll.scrollTop||document.documentElement.scrollTop) >= (scroll.scrollHeight - windowHeight) - scroll.scrollHeight / 4 && !this.state.loading && !this.state.end) {
         this.loadPage();
       }
     })
