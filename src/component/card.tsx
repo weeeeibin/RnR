@@ -65,7 +65,7 @@ const card = (props: Props) => {
             <MoreVertIcon />
           </IconButton>
         }
-        title={props.json.userInfo.name}
+        title={props.json.title}
         subheader={props.json.time}
       />
       <CardMedia

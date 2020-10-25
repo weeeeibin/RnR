@@ -37,6 +37,10 @@ p img{
   border-radius: .3em;
 }
 
+p,li{
+  text-align: justify;
+}
+
 .content{
   padding: 0 !important;
   margin: 0 !important;
@@ -74,7 +78,7 @@ h1{
 
 #content blockquote{
   border-left: .25em solid #D7DBDF;
-  margin: 0 40px 0 0;
+  margin: 0;
 }
 
 #content blockquote p{

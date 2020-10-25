@@ -1,4 +1,3 @@
-import { any } from 'prop-types';
 import React, { lazy, Suspense } from 'react';
 import * as ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
@@ -11,6 +10,7 @@ interface Props {
 
 }
 
+
 export const App = (props: Props) => {
 
   return (
@@ -18,7 +18,7 @@ export const App = (props: Props) => {
       <HashRouter>
         <Switch>
           <Route path="/" component={Index} exact />
-          <Route path="/MarkdownContent/:id" component={MarkdownContent}/>
+          <Route path="/MarkdownContent/:id" component={MarkdownContent} />
         </Switch>
       </HashRouter>
     </Suspense>
