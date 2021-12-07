@@ -7,6 +7,10 @@ $logoFontSize:var(--logoFontSize,3vh);
   logoFontSize:$logoFontSize;
 }
 
+input{
+    -webkit-appearance:none !important;
+}
+
 .main{
   position: absolute;
   width: 100%;

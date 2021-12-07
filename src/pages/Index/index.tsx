@@ -1,6 +1,6 @@
-import React, { Component, createRef, useState } from 'react'
+import React, { Component, createRef } from 'react'
 import * as style from './index.scss'
-import { makeStyles,withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
 import Paper from '@material-ui/core/Paper';
 import SearchIcon from '@material-ui/icons/Search';
@@ -18,7 +18,7 @@ const styles = {
     width: "17vw",
     minWidth: "15rem",
     height: "3vh",
-    background: "rgba(0,0,0,0.4)",
+    background: "rgba(0,0,0,0.6)",
     border: "none"
   },
   input: {
