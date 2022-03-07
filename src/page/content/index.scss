@@ -1,0 +1,51 @@
+$Background: var(--Background, #fff);
+$FontColor: var(--FontColor, #000);
+
+.markdown_content {
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 64px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: $Background;
+}
+
+@media (min-width: 0px) and (orientation: landscape) {
+  .markdown_content {
+    padding-top: 48px;
+  }
+}
+
+@media (min-width: 600px) {
+  .markdown_content {
+    padding-top: 83px;
+  }
+}
+
+.AppBar_Background {
+  background-color: #2e2e2e !important;
+}
+
+.AppBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.ThemeButton {
+  color: #fff !important;
+}
+
+.footer {
+  padding: 1rem 0;
+  width: 100%;
+  text-align: right;
+  overflow: hidden;
+  color: #bfbfbf;
+  font-size: 0.5rem;
+}

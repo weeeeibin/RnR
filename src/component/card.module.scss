@@ -1,0 +1,26 @@
+.card_content {
+  height: 6.5rem;
+  text-align: justify;
+  text-justify: newspaper;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.card {
+  cursor: pointer;
+}
+.media {
+  height: 0;
+  padding-top: 56.25%; // 16:9
+}
+.expand {
+  transform: rotate(0deg);
+  margin-left: auto;
+}
+.expandOpen {
+  transform: rotate(180deg);
+}
